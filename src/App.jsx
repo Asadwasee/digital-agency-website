@@ -1,5 +1,6 @@
 import Hero from "./components/home/Hero"
 import Stats from "./components/home/Stats"
+import Services from "./components/services/Services"
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       <main>
         <Hero />
         <Stats />
-          
+        <Services />
       </main>
       
     </div>
