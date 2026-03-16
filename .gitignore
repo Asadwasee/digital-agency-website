@@ -16,7 +16,6 @@ build/
 # misc
 .DS_Store
 *.pem
-.env*
 .vercel
 *.tsbuildinfo
 
@@ -29,3 +28,4 @@ yarn-error.log*
 # Git
 .git/
 digital-agency/.git/
+config.bat
