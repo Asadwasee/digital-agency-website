@@ -51,7 +51,9 @@ const services = [
   },
 ]
 
-const Services = () => {
+const Services = ({ limit }) => {
+  const displayedServices = limit ? services.slice(0, limit) : services;
+
   return (
     <section className="relative overflow-hidden bg-dark py-24 sm:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.14),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(139,92,246,0.16),transparent_32%)]" />
@@ -77,7 +79,8 @@ const Services = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service, index) => {
+          {/* Ab hum 'displayedServices' par map kar rahe hain */}
+          {displayedServices.map((service, index) => {
             const Icon = service.icon
 
             return (
@@ -92,7 +95,7 @@ const Services = () => {
                   delay: index * 0.08,
                   ease: 'easeOut',
                 }}
-                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
+                className="group relative overflow-hidden rounded-4xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl"
               >
                 <div
                   className={`absolute -right-12 -top-12 h-36 w-36 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-100 ${service.glow} opacity-60`}
