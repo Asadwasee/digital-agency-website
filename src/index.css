@@ -1,16 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  /* Custom Colors Definition */
-  --color-primary: #3b82f6;    /* Electric Blue */
-  --color-secondary: #8b5cf6;  /* Violet */
-  --color-dark: #0f172a;       /* Deep Slate Background */
-  --color-card: #1e293b;       /* Lighter Slate for Cards */
-
-  /* Custom Fonts */
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-dark: #0f172a;
+  --color-card: #1e293b;
   --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui;
-
-  /* Custom Animations if needed */
   --animate-float: float 3s ease-in-out infinite;
 
   @keyframes float {
@@ -19,8 +14,10 @@
   }
 }
 
-/* Base Styles */
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-dark text-white font-sans antialiased;
   }
