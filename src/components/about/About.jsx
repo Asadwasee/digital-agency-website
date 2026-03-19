@@ -23,7 +23,7 @@ const teamMembers = [
   },
 ];
 
-const AboutUs = () => {
+const About = () => {
   return (
     <div className="bg-slate-900 text-white min-h-screen">
 
@@ -105,4 +105,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;
