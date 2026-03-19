@@ -6,14 +6,21 @@ A modern, fully responsive, and animated business website built for a fictional 
 
 ## 🚀 Live Preview
 
-> Deployment link will be added after final submission.
-
+> https://digital-agency-alpha-drab.vercel.app
 ---
 
 ## 📸 Screenshots
 
-> Screenshots will be added after final build.
-
+### Home Page
+![Home](src/assets/screenshots/home.png)
+### About Page
+![About](src/assets/screenshots/about.png)
+### Services Page
+![Services](src/assets/screenshots/services.png)
+### Portfolio Page
+![Portfolio](src/assets/screenshots/portfolio.png)
+### Contact Page
+![Contact](src/assets/screenshots/contact.png)
 ---
 
 ## 🛠️ Tech Stack
@@ -54,21 +61,39 @@ digital-agency-website/
 │   └── icons.svg
 ├── src/
 │   ├── assets/
+│   │   ├── Members/
+│   │   │   ├── Asad.jpeg
+│   │   │   ├── Junaid.png
+│   │   │   ├── Abdullah.png
+│   │   │   ├── Fasiullah.png
+│   │   │   ├── Ahmad.png
+│   │   │   └── Shoaib.png
+│   │   ├── screenshots/
+│   │   │   ├── home.png
+│   │   │   ├── about.png
+│   │   │   ├── services.png
+│   │   │   ├── portfolio.png
+│   │   │   └── contact.png
 │   │   ├── hero.png
 │   │   ├── react.svg
 │   │   └── vite.svg
 │   ├── components/
 │   │   ├── layout/
 │   │   │   ├── Navbar.jsx        # Global navigation (Integration & QA)
-│   │   │   └── Footer.jsx        # Global footer (Integration & QA)
+│   │   │   ├── Footer.jsx        # Global footer (Integration & QA)
+│   │   │   └── ScrollToTop.jsx   # Scroll reset on route change (Integration & QA)
 │   │   ├── home/
 │   │   │   ├── Hero.jsx          # Hero section (Team Lead)
-│   │   │   └── Stats.jsx         # Statistics section (Team Lead)
+│   │   │   ├── Stats.jsx         # Statistics section (Team Lead)
+│   │   │   └── Testimonials.jsx  # Testimonials section (Team Lead)
 │   │   ├── services/
 │   │   │   └── Services.jsx      # Services section (Shoaib)
-│   │   ├── about/                # About components (Fasiullah)
-│   │   ├── portfolio/            # Portfolio components (Ahmad)
-│   │   └── contact/              # Contact components (Abdullah)
+│   │   ├── about/
+│   │   │   └── About.jsx         # About, Mission, Vision, Team (Fasiullah)
+│   │   ├── portfolio/
+│   │   │   └── Portfolio.jsx     # Projects grid with hover effects (Ahmad)
+│   │   └── contact/
+│   │       └── Contact.jsx       # Contact form and map (Abdullah)
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
@@ -131,8 +156,8 @@ Make sure you have the following installed:
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/Asadwasee/digital-agency-website.git
-cd digital-agency-website
+git clone https://github.com/Junaid-290/Digital-Agency.git
+cd Digital-Agency
 ```
 
 **2. Install dependencies**
