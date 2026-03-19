@@ -1,9 +1,7 @@
-const About = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <p className="text-slate-400 text-lg">About Page — Coming Soon</p>
-    </div>
-  )
+import About from '../components/about/About'
+
+const AboutPage = () => {
+  return <About />
 }
 
-export default About
+export default AboutPage

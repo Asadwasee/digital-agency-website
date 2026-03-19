@@ -181,7 +181,7 @@ const InfoItem = ({ icon, label, value }) => (
 );
 
 // ─── Main Contact Page ────────────────────────────────────────────────────────
-export default function ContactPage() {
+export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
@@ -255,22 +255,6 @@ export default function ContactPage() {
       {/* Grid bg layer */}
       <div className="fixed inset-0 grid-bg pointer-events-none" />
 
-      {/* ── NAV ────────────────────────────────────────────── */}
-      <nav className="relative z-20 flex items-center justify-between px-6 md:px-12 py-5 border-b border-white/5 backdrop-blur-md bg-black/10">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">N</div>
-          <span className="font-semibold text-white tracking-tight">Nexus<span className="text-blue-400">Studio</span></span>
-        </div>
-        <div className="hidden md:flex items-center gap-8 text-sm text-white/50">
-          {["Work", "Services", "About", "Contact"].map((item) => (
-            <a key={item} href="#" className={cn("transition-colors hover:text-white", item === "Contact" && "text-blue-400 font-medium")}>{item}</a>
-          ))}
-        </div>
-        <button className="hidden md:block text-xs font-semibold tracking-wider px-5 py-2 rounded-full border border-white/15 text-white/70 hover:text-white hover:border-white/30 transition-all duration-200">
-          Let's Talk →
-        </button>
-      </nav>
-
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className="relative z-10 pt-24 pb-20 px-6 md:px-12 text-center">
         <div className={cn("fade-up", mounted && "visible")}>
@@ -313,9 +297,9 @@ export default function ContactPage() {
             <GlassCard className={cn("p-7 fade-up delay-2", mounted && "visible")}>
               <h3 className="text-xs font-bold tracking-widest uppercase text-white/40 mb-6">Contact Details</h3>
               <div className="flex flex-col gap-5">
-                <InfoItem icon="📍" label="Address" value="123 Innovation Drive, San Francisco, CA 94105" />
-                <InfoItem icon="📞" label="Phone" value="+1 (415) 555-0192" />
-                <InfoItem icon="✉️" label="Email" value="hello@nexusstudio.co" />
+                <InfoItem icon="📍" label="Address" value="1st Floor Commercial Zone, Liberty MarketGulberg, Lahore" />
+                <InfoItem icon="📞" label="Phone" value="+92-355-1111111" />
+                <InfoItem icon="✉️" label="Email" value="hello@digitalagency.co" />
                 <InfoItem icon="⏰" label="Hours" value="Mon–Fri, 9am – 6pm PST" />
               </div>
             </GlassCard>
@@ -367,7 +351,7 @@ export default function ContactPage() {
                         value={form.name}
                         onChange={handleChange}
                         error={errors.name}
-                        placeholder="Jane Doe"
+                        placeholder="Usman Ali"
                       />
                       <InputField
                         label="Email Address"
@@ -376,7 +360,7 @@ export default function ContactPage() {
                         value={form.email}
                         onChange={handleChange}
                         error={errors.email}
-                        placeholder="jane@example.com"
+                        placeholder="usman@gmail.com"
                       />
                     </div>
                     <InputField
@@ -432,7 +416,7 @@ export default function ContactPage() {
 
    <div className="max-w-7xl mx-auto h-[500px] m-7">
   <MapContainer
-    center={[37.7878, -122.3990]}
+    center={[31.5165, 74.3552]}
     zoom={13}
     className="h-full w-full rounded-2xl"
   >
@@ -441,22 +425,12 @@ export default function ContactPage() {
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
 
-    <Marker position={[37.7878, -122.3990]}>
-      <Popup>Nexus Studio Office</Popup>
+    <Marker position={[31.5165, 74.3552]}>
+      <Popup>Digital Agency Office</Popup>
     </Marker>
   </MapContainer>
 </div>
 
-      {/* ── FOOTER ─────────────────────────────────────────── */}
-      <footer className="relative z-10 border-t border-white/5 px-6 md:px-12 py-8">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white font-bold text-xs">N</div>
-            <span className="text-sm text-white/40">NexusStudio © {new Date().getFullYear()}</span>
-          </div>
-          <p className="text-xs text-white/25 text-center">Crafted with precision · Built for impact</p>
-        </div>
-      </footer>
     </div>
   );
 }
